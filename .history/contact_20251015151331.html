@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameWorld - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0a0a0f, #050509, #000);
+      color: #eee;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+    }
+
+    h2 {
+      color: #00fff7;
+      text-shadow: 0 0 10px rgba(0, 255, 247, 0.6);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    label {
+      color: #00fff7;
+      font-weight: 500;
+    }
+
+    .form-control {
+      background-color: #0d0d12;
+      border: 1px solid rgba(0, 255, 247, 0.3);
+      color: #eee;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 10px #00fff7;
+      border-color: #00fff7;
+      background-color: #0d0d12;
+      color: #fff;
+    }
+
+    .btn-primary {
+      background-color: #00fff7;
+      border: none;
+      color: #000;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 15px #00fff7;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-secondary {
+      color: #00fff7;
+      border: 1px solid #00fff7;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #00fff7;
+      color: #000;
+      box-shadow: 0 0 10px #00fff7;
+    }
+
+    footer {
+      background-color: #0a0a0f;
+      border-top: 1px solid rgba(0, 255, 247, 0.3);
+      color: #aaa;
+      text-align: center;
+      padding: 15px 0;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">🎮 GameWorld</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav4">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav4">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  <h2 class="text-center mb-4">Contact Us</h2>
+
+  <!-- Bootstrap responsive form -->
+  <form class="row g-3 mt-3 p-4 rounded shadow bg-dark bg-opacity-75">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Your name" required>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+    </div>
+    <div class="col-12">
+      <label for="subject" class="form-label">Subject</label>
+      <input type="text" class="form-control" id="subject" placeholder="Subject">
+    </div>
+    <div class="col-12">
+      <label for="message" class="form-label">Message</label>
+      <textarea id="message" class="form-control" rows="5" placeholder="Your message"></textarea>
+    </div>
+    <div class="col-12 text-center mt-4">
+      <button class="btn btn-primary btn-lg px-4" type="submit">Send Message</button>
+      <div class="btn-group ms-3" role="group" aria-label="extra-buttons">
+        <button type="button" class="btn btn-outline-secondary">Cancel</button>
+        <button type="button" class="btn btn-outline-secondary">Reset</button>
+      </div>
+    </div>
+  </form>
+</main>
+<!-- Popup window -->
+<button class="btn btn-outline-info mt-4" onclick="openPopup()">Subscribe</button>
+
+<div id="popup" class="popup">
+  <div class="popup-content bg-dark text-light p-4 rounded shadow-lg">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h4 class="text-info mb-3">Subscribe to GameWorld</h4>
+    <p class="text-secondary">Get the latest gaming news and updates!</p>
+    <input type="email" class="form-control mb-3" placeholder="Enter your email">
+    <button class="btn btn-info w-100" onclick="closePopup()">Submit</button>
+  </div>
+</div>
+
+<footer>
+  <div class="container text-center">
+    <small>Team: Usenbai Nurdaulet, Amangeldinov Nurbol (SE-2406)</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

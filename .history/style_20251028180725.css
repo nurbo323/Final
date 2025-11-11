@@ -1,0 +1,404 @@
+/* ================================
+   GameWorld Style.css - UPDATED FOR ASSIGNMENT 7
+   ================================ */
+
+body {
+  background: radial-gradient(circle at top, #0a0a0f, #050509, #000);
+  color: #eee;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+/* ========== TASK 4: Scroll Progress Bar ========== */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background: linear-gradient(90deg, #00fff7, #ff00ff, #00fff7);
+  z-index: 9999;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.8);
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.2);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.nav-link {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00fff7 !important;
+  text-shadow: 0 0 8px #00fff7;
+}
+
+/* ========== Headings ========== */
+h1, h2, h3, h4, h5 {
+  color: #00fff7;
+  text-shadow: 0 0 10px rgba(0, 255, 247, 0.6);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ========== Buttons ========== */
+.btn-outline-info, .btn-info {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-outline-info:hover, .btn-info:hover {
+  box-shadow: 0 0 12px #00fff7;
+  transform: translateY(-3px);
+}
+
+/* ========== Cards ========== */
+.card {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 247, 0.3);
+  background-color: #0d0d12;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 255, 247, 0.4);
+}
+
+.card-title {
+  color: #00fff7;
+}
+
+.card-text {
+  color: #dcdcdc;
+}
+
+/* ========== TASK 9: Lazy Loading Images ========== */
+.lazy-image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* ========== Gallery Images ========== */
+img {
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+}
+
+.thumbnail-img {
+  cursor: pointer;
+}
+
+/* ========== Carousel ========== */
+.carousel-inner img {
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* ========== TASK 7: Toast Notifications ========== */
+.custom-toast {
+  min-width: 300px;
+  border-radius: 10px;
+  border: 1px solid #00fff7;
+  background: linear-gradient(135deg, #0d0d12, #1a1a2e);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.5);
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast-header {
+  background-color: #00fff7;
+  color: #000;
+  font-weight: bold;
+}
+
+/* ========== TASK 2: Autocomplete List ========== */
+#autocompleteList {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #0d0d12;
+  border: 1px solid #00fff7;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 255, 247, 0.3);
+}
+
+#autocompleteList .list-group-item {
+  background-color: #0d0d12;
+  color: #eee;
+  border: none;
+  border-bottom: 1px solid rgba(0, 255, 247, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#autocompleteList .list-group-item:hover {
+  background-color: rgba(0, 255, 247, 0.1);
+  color: #00fff7;
+}
+
+/* ========== TASK 3: Search Highlighting ========== */
+.highlight {
+  background-color: #ffff00;
+  color: #000;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* ========== TASK 8: Copy to Clipboard ========== */
+.code-snippet-box {
+  position: relative;
+  background-color: #1a1a2e;
+  border: 1px solid rgba(0, 255, 247, 0.3);
+}
+
+.copy-btn {
+  transition: all 0.3s ease;
+}
+
+.copy-btn.copied {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.copy-tooltip {
+  position: absolute;
+  top: -35px;
+  right: 10px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.copy-tooltip.show {
+  opacity: 1;
+}
+
+/* ========== TASK 5: Counter Animation ========== */
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* ========== Footer ========== */
+footer {
+  background-color: #0a0a0f;
+  color: #aaa;
+  border-top: 1px solid rgba(0, 255, 247, 0.3);
+  padding: 15px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* ========== Sections ========== */
+section {
+  padding: 60px 0;
+}
+
+.container p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ccc;
+}
+
+/* ========== FAQ Accordion ========== */
+.question {
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.question:hover {
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.answer {
+  display: none;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.answer.active {
+  display: block;
+}
+
+/* ========== Popup Window ========== */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  max-width: 400px;
+  width: 90%;
+  background-color: #0d0d12;
+  border: 1px solid #00fff7;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.4);
+}
+
+.close-popup {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #00fff7;
+  transition: 0.3s;
+}
+
+.close-popup:hover {
+  color: #ff0080;
+}
+
+/* ========== Star Rating ========== */
+.star-rating {
+  font-size: 2rem;
+}
+
+.star {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star:hover,
+.star.selected {
+  color: #FFD700;
+}
+
+/* ========== Responsive Typography ========== */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========== Utility ========== */
+.text-pink {
+  color: #ff77ff;
+}
+
+.border-pink {
+  border-color: #ff77ff !important;
+}
+
+.border-info {
+  border-color: #00fff7 !important;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 255, 247, 0.15) !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.bg-dark {
+  background-color: #0a0a0f !important;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(145deg, #0d0d12, #050509);
+}
+
+/* ========== Loading Spinner ========== */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}

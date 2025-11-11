@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameWorld - Home</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="scrollProgress"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand neon-text" href="index.html">🎮 GameWorld</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav" id="mainNav">
+        <li class="nav-item"><a class="nav-link active" href="index.html" data-lang="home">Басты бет</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html" data-lang="news">Жаңалықтар</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html" data-lang="gallery">Галерея</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-lang="contact">Байланыс</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img data-src="https://via.placeholder.com/1200x400?text=GTA+V" class="d-block w-100 lazy-image" alt="Game 1" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='400'%3E%3Crect fill='%230d0d12' width='1200' height='400'/%3E%3C/svg%3E">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</section>
+
+<section class="container my-4 text-center">
+  <div class="p-3 theme-box rounded-4 shadow">
+    <label for="languageSelector" class="theme-text fw-bold me-2" data-lang="selectLang">Тілді таңдаңыз:</label>
+    <select id="languageSelector" class="form-select w-auto d-inline-block">
+      <option value="kk">🇰🇿 Қазақша</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="ru">🇷🇺 Русский</option>
+    </select>
+  </div>
+</section>
+
+<section class="container my-4 text-center">
+  <div class="p-4 theme-box rounded-4 shadow">
+    <h3 id="userGreeting" class="neon-text" data-lang="greetingDefault">GameWorld-ке қош келдіңіз!</h3>
+    <div class="mt-3">
+      <input type="text" id="nameInput" class="form-control d-inline-block w-auto theme-input" placeholder="Атыңызды енгізіңіз">
+      <button class="btn btn-info ms-2" id="submitNameBtn" data-lang="submitBtn">Жіберу</button>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5 text-center">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="p-4 theme-box rounded-4 shadow">
+        <h2 class="neon-text counter" data-target="5000">0</h2>
+        <p class="theme-text" data-lang="activeUsers">Active Users</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 theme-box rounded-4 shadow">
+        <h2 class="neon-text counter" data-target="1250">0</h2>
+        <p class="theme-text" data-lang="gamesReviewed">Games Reviewed</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 theme-box rounded-4 shadow">
+        <h2 class="neon-text counter" data-target="850">0</h2>
+        <p class="theme-text" data-lang="newsArticles">News Articles</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <div class="row mb-4">
+    <div class="col-lg-6 col-md-12 p-4 theme-box rounded-4 shadow-sm">
+      <h2 class="neon-text" data-lang="welcomeTitle">GameWorld-ке қош келдіңіз</h2>
+      <div class="code-snippet-box mt-4 p-3 rounded">
+        <code id="codeSnippet">npm install gameworld-sdk</code>
+        <button class="btn btn-sm btn-outline-info ms-2 copy-btn" data-clipboard-target="#codeSnippet">
+          <i class="fas fa-copy"></i> Copy
+        </button>
+      </div>
+      <button class="btn btn-info mt-3" id="showTimeBtn" data-lang="showTimeBtn">Уақытты көрсету</button>
+      <p id="timeDisplay" class="mt-3 text-info"></p>
+    </div>
+  </div>
+</section>
+
+<section class="container text-center my-4">
+  <button class="btn btn-warning toggle-theme-btn" data-lang="toggleTheme">Күндізгі/Түнгі</button>
+  <button class="btn btn-info ms-2 change-bg-btn" data-lang="changeBg">Фон түсін өзгерту</button>
+  <button class="btn btn-success ms-2 play-sound-btn" data-lang="playSound">🔊 Дыбыс</button>
+</section>
+
+<div id="toastContainer" class="toast-container position-fixed top-0 start-0 p-3"></div>
+
+<footer class="text-center py-3 mt-5 theme-footer text-light">
+  <span data-lang="footerTeam">Команда:</span> NOVA | Nurdaulet, Nurbol | SE-2406
+  <p id="datetime" class="text-info"></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

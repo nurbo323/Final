@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameWorld | Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom border-info">
+    <div class="container-fluid">
+      <a class="navbar-brand text-info fw-bold" href="index.html">GameWorld</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link active text-info" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link text-light" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <section class="container mt-5 pt-5 text-center">
+    <h2 class="text-info mb-4">Game Gallery</h2>
+
+    <div id="gameCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner rounded-4 shadow-lg">
+        <div class="carousel-item active">
+          <img src="images/Fust Cause.jpg" class="d-block w-100" alt="Just Cause">
+        </div>
+        <div class="carousel-item">
+          <img src="images/Batman Arkham City.jpg" class="d-block w-100" alt="Batman">
+        </div>
+        <div class="carousel-item">
+          <img src="images/PUBG.jpg" class="d-block w-100" alt="PUBG">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Grid Gallery -->
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4">
+        <img src="images/assassins-creed-2.jpg" class="img-fluid rounded shadow" alt="">
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <img src="images/cs2.png" class="img-fluid rounded shadow" alt="">
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <img src="images/gtaV.png" class="img-fluid rounded shadow" alt="">
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <img src="images/farcry3.png" class="img-fluid rounded shadow" alt="">
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <img src="images/cod.png" class="img-fluid rounded shadow" alt="">
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <img src="images/battlefield.png" class="img-fluid rounded shadow" alt="">
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center mt-5 py-3 bg-dark text-secondary border-top border-info">
+    <p> 2025 GameWorld | Team NOVA | Nurbol & Nurdaulet</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

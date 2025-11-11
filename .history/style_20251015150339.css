@@ -1,0 +1,249 @@
+/* ================================
+   GameWorld Style.css
+   For Assignment #4 (Media Queries + Bootstrap)
+   ================================ */
+
+body {
+  background: radial-gradient(circle at top, #0a0a0f, #050509, #000);
+  color: #eee;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  box-shadow: 0 0 15px rgba(0, 255, 247, 0.2);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.nav-link {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00fff7 !important;
+  text-shadow: 0 0 8px #00fff7;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5 {
+  color: #00fff7;
+  text-shadow: 0 0 10px rgba(0, 255, 247, 0.6);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn-outline-info, .btn-info {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-outline-info:hover, .btn-info:hover {
+  box-shadow: 0 0 12px #00fff7;
+  transform: translateY(-3px);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 247, 0.3);
+  background-color: #0d0d12;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 255, 247, 0.4);
+}
+
+.card-title {
+  color: #00fff7;
+}
+
+.card-text {
+  color: #dcdcdc;
+}
+
+/* ---------- Gallery Images ---------- */
+img {
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.3);
+}
+
+/* ---------- Carousel ---------- */
+.carousel-inner img {
+  height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #0a0a0f;
+  color: #aaa;
+  border-top: 1px solid rgba(0, 255, 247, 0.3);
+  padding: 15px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 60px 0;
+}
+
+.container p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #ccc;
+}
+
+/* ---------- Responsive Typography ---------- */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------- Utility ---------- */
+.text-pink {
+  color: #ff77ff;
+}
+
+.border-pink {
+  border-color: #ff77ff !important;
+}
+
+.border-info {
+  border-color: #00fff7 !important;
+}
+
+.shadow {
+  box-shadow: 0 0 10px rgba(0, 255, 247, 0.15) !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+.bg-dark {
+  background-color: #0a0a0f !important;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(145deg, #0d0d12, #050509);
+}
+/* FAQ Accordion */
+.question {
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.question:hover {
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.answer {
+  display: none;
+  color: #ccc;
+  transition: all 0.3s ease;
+}
+
+.answer.active {
+  display: block;
+}
+
+/* Popup window */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  max-width: 400px;
+  width: 90%;
+  background-color: #0d0d12;
+  border: 1px solid #00fff7;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.4);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #00fff7;
+  transition: 0.3s;
+}
+.close:hover {
+  color: #ff0080;
+}

@@ -33,71 +33,90 @@
 
 /* ========== ASSIGNMENT 8: LIGHT THEME VARIABLES ========== */
 /* ========== LIGHT THEME (Gray Background Version) ========== */
-body.light-theme {
-  --bg-primary: #f0f0f0; /* main page background */
-  --bg-gradient: linear-gradient(to bottom, #e0e0e0 0%, #f5f5f5 50%, #ffffff 100%);
-  --bg-box: #ffffff;
-  --bg-card: #fafafa;
-
-  --text-primary: #000;
-  --text-secondary: #222;
-  --text-muted: #555;
-  --text-accent: #005bb5;
-
-  --border-color: rgba(0, 0, 0, 0.1);
-  --border-hover: rgba(0, 0, 0, 0.25);
-
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --shadow-hover: rgba(0, 0, 0, 0.2);
-
-  --neon-glow: none;
-  --neon-glow-strong: none;
-
-  --input-bg: #fff;
-  --input-border: rgba(0, 0, 0, 0.2);
-  --input-text: #000;
-
-  --footer-bg: #e6e6e6;
-  --navbar-bg: #ffffff;
-
-  --btn-primary: #005bb5;
-  --btn-primary-text: #ffffff;
-
-  --code-bg: #f2f2f2;
-}
-
 /* ============================================
-   LIGHT THEME FIX - ONLY FOR CONTACT PAGE
+   LIGHT THEME - CONTACT PAGE FIX
    ============================================ */
 
-/* Light Theme: Contact Page Input Fields */
-body.light-theme input#name,
-body.light-theme input#email,
-body.light-theme input#phone,
-body.light-theme textarea#message {
+/* Light Theme: Input Fields */
+body.light-theme input[type="text"],
+body.light-theme input[type="email"],
+body.light-theme input[type="tel"],
+body.light-theme textarea,
+body.light-theme select,
+body.light-theme .theme-input,
+body.light-theme .form-control {
   background-color: #ffffff !important;
   color: #333333 !important;
   border: 1px solid #cccccc !important;
 }
 
-body.light-theme input#name::placeholder,
-body.light-theme input#email::placeholder,
-body.light-theme input#phone::placeholder,
-body.light-theme textarea#message::placeholder {
+body.light-theme input[type="text"]::placeholder,
+body.light-theme input[type="email"]::placeholder,
+body.light-theme input[type="tel"]::placeholder,
+body.light-theme textarea::placeholder {
   color: #999999 !important;
 }
 
-/* Light Theme: Contact Page Footer */
-body.light-theme footer.theme-footer {
-  background-color: #f8f9fa !important;
+/* Light Theme: Form Labels */
+body.light-theme label,
+body.light-theme .form-label {
   color: #333333 !important;
 }
 
-body.light-theme footer.theme-footer p,
-body.light-theme footer.theme-footer span {
+/* Light Theme: Contact Form Box */
+body.light-theme #contactFormContainer,
+body.light-theme .form-step {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+/* Light Theme: Footer */
+body.light-theme footer,
+body.light-theme .theme-footer {
+  background-color: #f8f9fa !important;
+  color: #333333 !important;
+  border-top: 2px solid #cccccc;
+}
+
+body.light-theme footer p,
+body.light-theme footer span {
   color: #555555 !important;
 }
 
+/* Light Theme: Step Headers in Contact */
+body.light-theme .form-step h3,
+body.light-theme .form-step h4 {
+  color: #0066cc !important;
+}
+
+/* Light Theme: Contact Form Container */
+body.light-theme #contactFormContainer .theme-box {
+  background-color: #ffffff !important;
+  border: 1px solid #dddddd !important;
+}
+
+/* Light Theme: Subscribe Button (Newsletter) */
+body.light-theme .subscribe-popup-btn {
+  background-color: transparent !important;
+  color: #0066cc !important;
+  border: 2px solid #0066cc !important;
+}
+
+body.light-theme .subscribe-popup-btn:hover {
+  background-color: #0066cc !important;
+  color: #ffffff !important;
+}
+
+/* Light Theme: Buttons in Contact Form */
+body.light-theme .btn-outline-info {
+  color: #0066cc !important;
+  border-color: #0066cc !important;
+}
+
+body.light-theme .btn-outline-info:hover {
+  background-color: #0066cc !important;
+  color: #ffffff !important;
+}
 
 
 
